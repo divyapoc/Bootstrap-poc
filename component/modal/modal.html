@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <!--************************* Modal-Notes  *************************** -->
+    <!-- modal-like alert box = just like swal(sweet alert)
+      important class and attribute 
+      1. data-bs-toggle - modal => to open hidden content as modal.
+      add this attribute in button which is going to open alert box
+
+      2.data-bs-target='id-selector' to open which modal (name given to .modal element) ,
+       should be unique for each modal  {#idname}
+
+      3.data-bs-dismiss='modal' - to close the modal {add this to close button}
+      ************************************************************************
+      for buliding modal
+      class=>
+      .modal => gives modal wih fixed position, to hide content before clicking
+      .modali-dialog => gives modal width( default - 500px ) , positioning of modal in viewport
+      .modal-content=> gives  flex- direction column ,(content inside aligned as column)
+      .modal-header=> gives  header part of model - flex , justifycontent-space-between , border-bottom 
+      .modal-body=> gives  body of modal - some padding , fits content 
+      .modal-footer=> gives  flex , justifycontent = end, border-top ,
+
+    ******************************* additional attribue ***********************************************
+         additional attribue 
+         4. data-bs-keyboard = default value - true => can close modal by presiing escape key in keyboard
+          data-bs-keyboard =false - cant='t close modal by pressing escape key'
+
+        5.data-bs-backdrop = default value - true => can close modal by clicking outside of modal
+          if data-bs-backdrop ='static' can't close by clicking outside , modal can be closed either
+          by clicking close button in it or else by clicking other response btton in modal.
+        
+     ****************************additional class****************************************************
+     1) .modal-dialog-centered (to given in .modal-dialog div) - to vertically center the modal in viewport
+     2) .modal-dialog-scrollable (to given in .modal-dialog div) - to have scrollable modal (if content is large)
+     to change width of modal
+     small-max-width=>.modal-sm =>300px 
+     large=>.modal-lg =>800px 
+     extralarge-.modal-xl =>1140px
+
+     3) Fullscreen Modal
+     .modal-fullscreen	         Always fullscreen in all device
+     .modal-fullscreen-sm-down	Below 576px =>modal will occpy full screen below 576px device
+     .modal-fullscreen-md-down	Below 768px
+     .modal-fullscreen-lg-down	Below 992px
+     .modal-fullscreen-xl-down	Below 1200px
+     .modal-fullscreen-xxl-down	Below 1400p
+     -->
+
+    -->
+    <!-- modal-content - flex, direction-column -->
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-4">
+          <div class="card p-2">
+            <div class="card-header">modal example</div>
+            <img
+              src="../images/tree.jpg"
+              alt="profile"
+              class="card-img-top rounded-circle"
+            />
+            <div class="card-body">
+              <button
+                class="btn btn-primary w-100"
+                data-bs-toggle="modal"
+                data-bs-target="#modal1"
+              >
+                delete profile
+              </button>
+            </div>
+            <div
+              class="modal fade"
+              id="modal1"
+              tabindex="-1"
+              aria-hidden="true"
+              data-bs-backdrop="static"
+              data-bs-keyboard="false"
+            >
+              <div
+                class="modal-dialog modal-dialog-scrollable modal-dialog-centered"
+              >
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h3>conformation</h3>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                      are you sure, <br />
+                      want to delete your profile Lorem ipsum dolor sit amet
+                      consectetur adipisicing elit. Eius adipisci consequuntur
+                      nostrum hic ducimus officia vitae veritatis veniam? Velit
+                      vitae assumenda culpa sapiente sunt expedita ipsam impedit
+                      eius recusandae consequatur! Lorem ipsum dolor sit amet
+                      consectetur adipisicing elit. Ducimus iusto magnam,
+                    </p>
+                    <!-- <p class="d-none">
+                      want to delete your profile Lorem ipsum dolor sit amet
+                      consectetur adipisicing elit. Eius adipisci consequuntur
+                      nostrum hic ducimus officia vitae veritatis veniam? Velit
+                      vitae assumenda culpa sapiente sunt expedita ipsam impedit
+                      eius recusandae consequatur! Lorem ipsum dolor sit amet
+                      consectetur adipisicing elit. Ducimus iusto magnam,
+                      placeat repellendus, velit mollitia ipsum ad fugiat
+                      architecto veniam dolores vitae ullam incidunt ratione
+                      nobis dicta hic labore ab. want to delete your profile
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Eius adipisci consequuntur nostrum hic ducimus officia
+                      vitae veritatis veniam? Velit vitae assumenda culpa
+                      sapiente sunt expedita ipsam impedit eius recusandae
+                      consequatur! Lorem ipsum dolor sit amet consectetur
+                      adipisicing elit. Ducimus iusto magnam, placeat
+                      repellendus, velit mollitia ipsum ad fugiat architecto
+                      veniam dolores vitae ullam incidunt ratione nobis dicta
+                      hic labore ab.
+                    </p> -->
+                  </div>
+                  <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">
+                      close
+                    </button>
+                    <button class="btn btn-primary">Delete</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

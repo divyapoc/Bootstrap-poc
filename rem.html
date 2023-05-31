@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>rem an em</title>
+    <style>
+      /* default rem - 16px */
+      /* html {
+        font-size: 50px;
+      } */
+      /* p {
+        font-size: 1rem;
+      }
+      div {
+        font-size: 2em;  div - 32px  div2- 32px*2 = 64  div3- 64*2-128
+      } */
+    </style>
+  </head>
+  <body>
+    <!-- rem and em - relative to font size -->
+    <!-- rem - relative to font size of root element
+    em- relative parent font-size -->
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit
+      distinctio temporibus ipsam vitae quibusdam delectus iure et possimus non,
+      atque commodi eius explicabo unde numquam inventore dolor asperiores
+      officia ratione!
+    </p>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit esse
+      quisquam ut? Vero ullam rem ipsa ab adipisci autem reprehenderit libero
+      impedit cumque quae vitae veniam repellendus incidunt, aspernatur omnis?
+      <div>
+        child
+        <div>child2 div 3</div>
+      </div>
+    </div>
+  </body>
+</html>

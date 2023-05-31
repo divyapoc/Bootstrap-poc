@@ -1,0 +1,45 @@
+body {
+  margin-top: 40px;
+}
+body::before {
+  content: "XS";
+  font-size: 35px;
+  color: green;
+  font-weight: bold;
+}
+
+@media (min-width: 576px) {
+  body::before {
+    content: "SM";
+  }
+}
+
+@media (min-width: 768px) {
+  body::before {
+    content: "MD";
+  }
+}
+
+@media (min-width: 992px) {
+  body::before {
+    content: "L";
+  }
+}
+
+@media (min-width: 1200px) {
+  body::before {
+    content: "Xl";
+  }
+}
+
+@media (min-width: 1400px) {
+  body::before {
+    content: "XXl";
+  }
+}
+
+.box {
+  background-color: violet;
+  padding: 10px;
+  margin-top: 5px;
+}
